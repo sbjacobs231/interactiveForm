@@ -75,34 +75,34 @@ $('.activity').on('change', function() {
 		$('#activitiesError').hide();
 	}
 	/* ----------- Time Contrast ---------- */
-	// If conference is from 9-12pm
-	if ($(this).val().split(',')[1] === "nineToTwelve") {
+	// If conference is from 9-12pm on Tuesday
+	if ($(this).val().split(',')[1] === "nineToTwelveTues") {
 		// If conference is checked
 		if ($(this).prop('checked') === true) {
 			// Disable conflicting conferences
-			$('[value=\"100,nineToTwelve\"]').prop('disabled', true);
-			$('[value=\"100,nineToTwelve\"]').parent().css('color', 'gray');
+			$('[value=\"100,nineToTwelveTues\"]').prop('disabled', true);
+			$('[value=\"100,nineToTwelveTues\"]').parent().css('color', 'gray');
 			$(this).prop('disabled',false);
 			$(this).parent().css('color', '#000');
 		// If conference is unchecked
 		} else {
 			// Enable conflicting times
-			$('[value=\"100,nineToTwelve\"]').prop('disabled', false);
-			$('[value=\"100,nineToTwelve\"]').parent().css('color', '#000');
+			$('[value=\"100,nineToTwelveTues\"]').prop('disabled', false);
+			$('[value=\"100,nineToTwelveTues\"]').parent().css('color', '#000');
 		}
-	// If conference is from 1-4pm
-	} else if ($(this).val().split(',')[1] === "oneToFour") {
+	// If conference is from 1-4pm on Tuesday
+	} else if ($(this).val().split(',')[1] === "oneToFourTues") {
 		if ($(this).prop('checked') === true) {
 			// Disable conflicting conferences
-			$('[value=\"100,oneToFour\"]').prop('disabled', true);
-			$('[value=\"100,oneToFour\"]').parent().css('color', 'gray');
+			$('[value=\"100,oneToFourTues\"]').prop('disabled', true);
+			$('[value=\"100,oneToFourTues\"]').parent().css('color', 'gray');
 			$(this).prop('disabled',false);
 			$(this).parent().css('color', '#000');
 		// If conference is unchecked
 		} else {
 			// Enable conflicting times
-			$('[value=\"100,oneToFour\"]').prop('disabled', false);
-			$('[value=\"100,oneToFour\"]').parent().css('color', '#000');
+			$('[value=\"100,oneToFourTues\"]').prop('disabled', false);
+			$('[value=\"100,oneToFourTues\"]').parent().css('color', '#000');
 		}
 	}
 })
